@@ -1,0 +1,82 @@
+*{  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    user-select: none;}
+:root{--main-color:#009688;}
+::-webkit-scrollbar{width: 0;}
+a{text-decoration: none;}
+button{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;}
+body{background-color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+.container{
+    width: 80%;
+    margin: auto;}
+.container .search{
+    width: 100%;
+    padding: 20px 20px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;}
+.container .search input{
+    width: 100%;
+    height: 54px;
+    padding: 15px 20px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;}
+.container .search button{
+    background-color: var(--main-color);
+    width: 140px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;}
+.container .repos-data{
+    padding: 20px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;}
+.container .repos-data > p{padding-bottom: 20px;}
+.container .repos-data > p span{color: var(--main-color);}
+.repos-data .repo-box{
+    border: solid var(--main-color) 1px;
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr repeat(3,80px);
+    align-items: center;
+    gap: 15px;}
+.repos-data .repo-box p,
+.repos-data .repo-box button{
+    color: var(--main-color);
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    font-weight: bold;
+    font-size: .9rem;
+    border-radius: 4px;}
+.repos-data .repo-box button{
+    color: white; 
+    background-color: var(--main-color);
+    padding: 0 10px;}
+@media (max-width: 768px) {
+    button{cursor: default;}
+    .container{width: 100%;}
+    .repos-data .repo-box{
+        border-radius: 10px;
+        place-items: center;
+        grid-template-columns: repeat(3,1fr) ;
+        grid-template-areas: 'a a a';}
+    .repos-data .repo-box span{
+        text-align: center;
+        grid-area: a;}}
