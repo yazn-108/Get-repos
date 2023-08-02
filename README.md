@@ -1,2 +1,2 @@
 # Get-repos
-Get user's GitHub repositories by username
+Project creation course: https://youtu.be/SRhJv9IKWMY
